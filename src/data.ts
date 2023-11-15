@@ -3,7 +3,7 @@ interface DataType {
   subheader?: string,
   content: string[]
   date?: string
-  website?: string
+  website?: string[]
 }
 
 interface SectionType {
@@ -11,7 +11,7 @@ interface SectionType {
   employment: DataType[]
   projects: DataType[]
   volunteering: DataType[]
-  educationalProjects: DataType[]
+  learning: DataType[]
 }
 
 export const sectionData: SectionType = {
@@ -140,19 +140,34 @@ export const sectionData: SectionType = {
     }
 
   ],
-  educationalProjects: [
+  learning: [
+    {
+      header: 'Catchlight',
+      subheader: 'React, Axios, Tailwind-css, Express',
+      website: [ 
+        'https://github.com/bilykb/catchlight', 
+        'https://github.com/bilykb/catchlight-api' 
+      ],
+      content: [
+        '• Catchlight was built as a final project with a team of students at Lighthouse Labs. It allows users to save a list of previously watched movies, rate and communicate with other users in regards to their preferences'
+      ]
+    },
     {
       header: 'Keyhole',
       subheader: '',
-      website: 'https://github.com/bilykb/PasswordKeepR',
+      website: [
+        'https://github.com/bilykb/PasswordKeepR'
+      ],
       content: [
-        '• Keyhole is a full-stack,  multi-page application that allows the user to generate and save passwords with two-way AES 256-bit encryption'
+        '• Keyhole is a full-stack, multi-page application that allows the user to generate and save passwords with two-way AES 256-bit encryption'
       ]
     },
     {
       header: 'Scheduler',
       subheader: '',
-      website: 'https://github.com/bilykb/scheduler',
+      website: [
+        'https://github.com/bilykb/scheduler'
+      ],
       content: [
         '• Scheduler is a front-end focused, single-page application that allows users to schedule interviews with programming mentors'
       ]
@@ -160,7 +175,9 @@ export const sectionData: SectionType = {
     {
       header: 'Tweeter',
       subheader: '',
-      website: 'https://github.com/bilykb/tweeter',
+      website: [
+        'https://github.com/bilykb/tweeter'
+      ],
       content: [
         '• Tweeter is a front-end focused, single-page Twitter clone where users can post tweets'
       ]
@@ -168,7 +185,9 @@ export const sectionData: SectionType = {
     {
       header: 'Jungle',
       subheader: '',
-      website: 'https://github.com/bilykb/jungle-rails',
+      website: [
+        'https://github.com/bilykb/jungle-rails'
+      ],
       content: [
         '• Jungle is a full-stack, multi-page application that allows people to navigate a store page, and make purchases'
       ]
