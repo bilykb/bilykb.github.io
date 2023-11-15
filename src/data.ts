@@ -53,7 +53,7 @@ export const sectionData: SectionType = {
         '• Deliver features, fix bugs, and support the software application through the entire software development cycle, from inception to delivery and adoption',
         '• Contribute to Athennian\'s Diversity, Equity, and Inclusion Committee',
         '• Utilized AI, such as chatGPT, as a valuable resource to enhance problem-solving and code optimization',
-        '• Tech stack included Angular2+, AngularJS, Express, MongoDB, AWS'
+        '• Tech stack included Angular2+, AngularJS, Express, MongoDB, Mongoose, AWS, SASS'
       ]
     },
     {
@@ -143,7 +143,7 @@ export const sectionData: SectionType = {
   learning: [
     {
       header: 'Catchlight',
-      subheader: 'React, Axios, Tailwind-css, Express',
+      subheader: 'React, Axios, Tailwind-css, Express.js, Postgresql',
       website: [ 
         'https://github.com/bilykb/catchlight', 
         'https://github.com/bilykb/catchlight-api' 
@@ -154,7 +154,7 @@ export const sectionData: SectionType = {
     },
     {
       header: 'Keyhole',
-      subheader: '',
+      subheader: 'React, Axios, CSS, Express.js, bcryptjs, Postgresql, SASS',
       website: [
         'https://github.com/bilykb/PasswordKeepR'
       ],
@@ -164,7 +164,7 @@ export const sectionData: SectionType = {
     },
     {
       header: 'Scheduler',
-      subheader: '',
+      subheader: 'React, Storybook, axios',
       website: [
         'https://github.com/bilykb/scheduler'
       ],
@@ -174,7 +174,7 @@ export const sectionData: SectionType = {
     },
     {
       header: 'Tweeter',
-      subheader: '',
+      subheader: 'React, Express.js',
       website: [
         'https://github.com/bilykb/tweeter'
       ],
@@ -184,7 +184,7 @@ export const sectionData: SectionType = {
     },
     {
       header: 'Jungle',
-      subheader: '',
+      subheader: 'Ruby, Ruby on Rails, Postgresql',
       website: [
         'https://github.com/bilykb/jungle-rails'
       ],
