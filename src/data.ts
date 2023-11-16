@@ -1,4 +1,4 @@
-interface DataType {
+export interface DataType {
   header: string,
   subheader?: string,
   content: string[]
@@ -12,6 +12,7 @@ interface SectionType {
   projects: DataType[]
   volunteering: DataType[]
   learning: DataType[]
+  [key: string]: DataType[]
 }
 
 export const sectionData: SectionType = {
@@ -70,6 +71,7 @@ export const sectionData: SectionType = {
     },
     {
       header: 'Government of Alberta - Heritage Resource Management Branch',
+      subheader: 'Intern',
       date: 'May 2016 to August 2016',
       content: [
         'Performed extensive and thorough research into one of Alberta\'s potential heritage structures while utilizing archival material',
