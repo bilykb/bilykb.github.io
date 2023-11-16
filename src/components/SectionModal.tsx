@@ -8,31 +8,33 @@ import {
   ModalBody,
   ModalFooter,
   Button,
-  Text,
+  UnorderedList,
+  ListItem,
+  Heading
 } from '@chakra-ui/react'
-import { useState, useEffect } from 'react'
+import { DataType } from '../data'
 
 //@ts-expect-error properties are typed via chakra
-function SectionModal({ isOpen, onClose, sectionName, content }) {
+function SectionModal({ isOpen, onClose, sectionName, selectedContent }) {
 
-  //@ts-expect-error asdfasdf
-  const [ title, setTitle ] = useState('')
-
-  useEffect(() => {
-    setTitle(sectionName)
-  }, [sectionName])
-
+  //@ts-expect-error will be addressed
   return (
     <>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>{ title }</ModalHeader>
+          <ModalHeader>{ sectionName }</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Text>
-              here here
-            </Text>
+            <UnorderedList styleType="none">
+              {selectedContent.map((sectionInfo: DataType, index: number) => (
+                <ListItem key={index}>
+                  <Heading as='h1' size='lg'>{sectionInfo.header}</Heading>
+                  <Heading as='h2' size='sm'>{sectionInfo.subheader}</Heading>
+                  <Heading as='h3' size='sm'>{sectionInfo.date}</Heading>
+                </ListItem>
+              ))}
+            </UnorderedList>
           </ModalBody>
 
           <ModalFooter>
