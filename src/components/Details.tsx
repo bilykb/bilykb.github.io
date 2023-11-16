@@ -7,17 +7,19 @@ import { SimpleGrid,
   Button,
   useDisclosure,
 } from '@chakra-ui/react'
-import { sectionData } from '../data'
+import { DataType, sectionData } from '../data'
 import SectionModal from './SectionModal'
 
 
 function Details() {
 
   const { isOpen, onOpen, onClose } = useDisclosure()
-  const [ selectedSection, setSelectedSection ]= useState('')
-
+  const [ selectedSection, setSelectedSection ] = useState('')
+  const [ selectedContent, setSelectedContent ] = useState<DataType[]>([])
+  
   const openModal = (sectionName: string) => {
     setSelectedSection(sectionName)
+    setSelectedContent(sectionData[sectionName])
     onOpen()
   }
 
@@ -29,7 +31,7 @@ function Details() {
   return (
     <>
       <SimpleGrid spacing={4} templateColumns='repeat(auto-fill, minmax(200px, 1fr))'>
-        {Object.entries(sectionData).map(([sectionName, sectionContent]) => {
+        {Object.keys(sectionData).map(sectionName => {
           return (
             <Card>
               <CardHeader>
@@ -37,17 +39,20 @@ function Details() {
               </CardHeader>
               <CardFooter>
                 <Button onClick={ () => openModal(sectionName) }>Expand</Button>
-                <SectionModal 
-                  isOpen={isOpen && selectedSection === sectionName} 
-                  onClose={closeModal} 
-                  sectionName={sectionName} 
-                  content={sectionContent}
-                />
               </CardFooter>
             </Card>
           )
         })}
       </SimpleGrid>
+      {isOpen && selectedSection && (
+        <SectionModal 
+          isOpen={isOpen} 
+          onClose={closeModal} 
+          sectionName={selectedSection.toUpperCase()} 
+          selectedContent={selectedContent}
+        />
+
+      )}
     </>
   )
 }
