@@ -10,7 +10,7 @@ import {
   Button,
   UnorderedList,
   ListItem,
-  Heading
+  Heading,
 } from '@chakra-ui/react'
 import { DataType } from '../data'
 
@@ -22,7 +22,7 @@ function SectionModal({ isOpen, onClose, sectionName, selectedContent }) {
     <>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
-        <ModalContent>
+        <ModalContent maxW='50%'>
           <ModalHeader>{ sectionName }</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
@@ -32,6 +32,11 @@ function SectionModal({ isOpen, onClose, sectionName, selectedContent }) {
                   <Heading as='h1' size='lg'>{sectionInfo.header}</Heading>
                   <Heading as='h2' size='sm'>{sectionInfo.subheader}</Heading>
                   <Heading as='h3' size='sm'>{sectionInfo.date}</Heading>
+                  <UnorderedList>
+                    {sectionInfo.content.map((contentPoints, index) => (
+                      <ListItem key={index}>{contentPoints}</ListItem>
+                    ))}
+                  </UnorderedList>
                 </ListItem>
               ))}
             </UnorderedList>
