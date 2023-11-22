@@ -32,7 +32,7 @@ function SectionModal({ isOpen, onClose, sectionName, selectedContent }) {
                   <Heading as='h1' size='lg'>{sectionInfo.header}</Heading>
                   <Heading as='h2' size='sm'>{sectionInfo.subheader}</Heading>
                   <Heading as='h3' size='sm'>{sectionInfo.date}</Heading>
-                  <UnorderedList>
+                  <UnorderedList mb={'2%'}>
                     {sectionInfo.content.map((contentPoints, index) => (
                       <ListItem key={index}>{contentPoints}</ListItem>
                     ))}
