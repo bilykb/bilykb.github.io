@@ -46,13 +46,13 @@ function Details() {
             )
           })}
       </SimpleGrid>
-        {isOpen && selectedSection && (
-          <SectionModal 
-            isOpen={isOpen} 
-            onClose={closeModal} 
-            sectionName={selectedSection.toUpperCase()} 
-            selectedContent={selectedContent}
-          />
+      {isOpen && selectedSection && (
+        <SectionModal 
+          isOpen={isOpen} 
+          onClose={closeModal} 
+          sectionName={selectedSection.toUpperCase()} 
+          selectedContent={selectedContent}
+        />
         )}
     </>
   )
