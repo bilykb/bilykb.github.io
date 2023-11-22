@@ -35,7 +35,7 @@ export const sectionData: SectionType = {
       header: 'MacEwan University',
       date: 'September 2010 to May 2015',
       content: [
-        'Bachelor of ARts History Major and Political Science Minor'
+        'Bachelor of Arts History Major and Political Science Minor'
       ]
     }
   ],

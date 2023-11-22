@@ -16,6 +16,8 @@ function Details() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [ selectedSection, setSelectedSection ] = useState('')
   const [ selectedContent, setSelectedContent ] = useState<DataType[]>([])
+
+  const sectionDataKeyArray = Object.keys(sectionData)
   
   const openModal = (sectionName: string) => {
     setSelectedSection(sectionName)
@@ -30,29 +32,28 @@ function Details() {
 
   return (
     <>
-      <SimpleGrid spacing={4} templateColumns='repeat(auto-fill, minmax(200px, 1fr))'>
-        {Object.keys(sectionData).map(sectionName => {
-          return (
-            <Card>
-              <CardHeader>
-                <Heading size='md'>{sectionName.toUpperCase()}</Heading>
-              </CardHeader>
-              <CardFooter>
-                <Button onClick={ () => openModal(sectionName) }>Expand</Button>
-              </CardFooter>
-            </Card>
-          )
-        })}
+      <SimpleGrid columns={sectionDataKeyArray.length} row={1} spacing={10}>
+          {sectionDataKeyArray.map(sectionName => {
+            return (
+                <Card>
+                  <CardHeader>
+                    <Heading size='md'>{sectionName.toUpperCase()}</Heading>
+                  </CardHeader>
+                  <CardFooter>
+                    <Button onClick={ () => openModal(sectionName) }>Expand</Button>
+                  </CardFooter>
+                </Card>
+            )
+          })}
       </SimpleGrid>
-      {isOpen && selectedSection && (
-        <SectionModal 
-          isOpen={isOpen} 
-          onClose={closeModal} 
-          sectionName={selectedSection.toUpperCase()} 
-          selectedContent={selectedContent}
-        />
-
-      )}
+        {isOpen && selectedSection && (
+          <SectionModal 
+            isOpen={isOpen} 
+            onClose={closeModal} 
+            sectionName={selectedSection.toUpperCase()} 
+            selectedContent={selectedContent}
+          />
+        )}
     </>
   )
 }
