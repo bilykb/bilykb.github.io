@@ -54,7 +54,7 @@ export const sectionData: SectionType = {
         'Deliver features, fix bugs, and support the software application through the entire software development cycle, from inception to delivery and adoption',
         'Contribute to Athennian\'s Diversity, Equity, and Inclusion Committee',
         'Utilized AI, such as chatGPT, as a valuable resource to enhance problem-solving and code optimization',
-        'Tech stack included Angular2+, AngularJS, Express, MongoDB, Mongoose, AWS, SASS'
+        'Tech stack included TypeScript, JavaScript, Angular2+, AngularJS, Express, MongoDB, Mongoose, AWS, SASS'
       ]
     },
     {
@@ -196,3 +196,110 @@ export const sectionData: SectionType = {
     }
   ]
 }
+
+interface Skill {
+  name: string,
+  source?: string
+}
+
+export const techSkills: Skill[] = [
+  {
+    name: 'JavaScript',
+    source: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'
+  },
+  {
+    name: 'TypeScript',
+    source: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg'
+  },
+  {
+    name: 'React',
+    source: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
+  },
+  {
+    name: 'jQuery',
+    source: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg'
+  },
+  {
+    name: 'Node.js',
+    source: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg'
+  },
+  {
+    name: 'express.js',
+    source: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg'
+  },
+  {
+    name: 'Storybook',
+    source: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg'
+  },
+  {
+    name: 'Jest',
+    source: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg'
+  },
+  {
+    name: 'Mocha/Chai',
+    source: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mocha/mocha-plain.svg'
+  },
+  {
+    name: 'Cypress'
+  },
+  {
+    name: 'AXIOS'
+  },
+  {
+    name: 'AJAX'
+  },
+  {
+    name: 'AngularJS',
+    source: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original-wordmark.svg'
+  },
+  {
+    name: 'Angular 2+',
+    source: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg'
+  },
+  {
+    name: 'PostgreSQL',
+    source: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
+  },
+  {
+    name: 'mySQL',
+    source: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg'
+  },
+  {
+    name: 'MongoDB',
+    source: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg'
+  },
+  {
+    name: 'Mongoose',
+  },
+  {
+    name: 'Ruby',
+    source: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg'
+  },
+  {
+    name: 'Ruby on Rails',
+    source: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-plain.svg'
+  },
+  {
+    name: 'Active Record',
+  },
+  {
+    name: 'SASS',
+    source: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg'
+  },
+  {
+    name: 'Bootstrap',
+    source: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg'
+  },
+  {
+    name: 'Bitbucket',
+    source: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bitbucket/bitbucket-original.svg'
+  },
+  {
+    name: 'Github',
+    source: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg'
+  },
+  {
+    name: 'Jira',
+    source: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg'
+  }
+]
