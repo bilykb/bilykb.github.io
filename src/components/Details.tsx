@@ -9,6 +9,7 @@ import { SimpleGrid,
 } from '@chakra-ui/react'
 import { DataType, sectionData } from '../data'
 import SectionModal from './SectionModal'
+import Skills from './Skills'
 
 
 function Details() {
@@ -35,17 +36,18 @@ function Details() {
       <SimpleGrid columns={sectionDataKeyArray.length} row={1} spacing={10}>
           {sectionDataKeyArray.map(sectionName => {
             return (
-                <Card>
-                  <CardHeader>
-                    <Heading size='md'>{sectionName.toUpperCase()}</Heading>
-                  </CardHeader>
-                  <CardFooter>
-                    <Button onClick={ () => openModal(sectionName) }>Expand</Button>
-                  </CardFooter>
-                </Card>
+              <Card>
+                <CardHeader>
+                  <Heading size='md'>{sectionName.toUpperCase()}</Heading>
+                </CardHeader>
+                <CardFooter>
+                  <Button onClick={ () => openModal(sectionName) }>Expand</Button>
+                </CardFooter>
+              </Card>
             )
           })}
       </SimpleGrid>
+      <Skills />
       {isOpen && selectedSection && (
         <SectionModal 
           isOpen={isOpen} 
