@@ -9,7 +9,9 @@ const {
   Card,
   Heading,
   Button,
-  Modal
+  Modal,
+  Tag,
+  Avatar
 } = chakraTheme.components
 
 const theme = extendBaseTheme({
@@ -17,7 +19,9 @@ const theme = extendBaseTheme({
     Button,
     Card,
     Heading,
-    Modal
+    Modal,
+    Tag,
+    Avatar
   },
 })
 
