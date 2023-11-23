@@ -10,6 +10,7 @@ function Portrait() {
     <Box boxSize='sm'>
       <Image 
         src='../../images/portrait.jpeg'
+        boxSize='85%'
         borderRadius='full'
       />
     </Box>
